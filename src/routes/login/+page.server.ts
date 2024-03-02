@@ -27,7 +27,6 @@ export const actions = {
         } catch (e) {
             shouldCreate = true;
         }
-
         if (shouldCreate) {
             await pocketbase.collection("usernames").create({
                 username
