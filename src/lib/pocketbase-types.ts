@@ -6,9 +6,7 @@ import type PocketBase from "pocketbase";
 import type { RecordService } from "pocketbase";
 
 export enum Collections {
-	Emojis = "emojis",
-	Info = "info",
-	MergeCache = "merge_cache",
+	Usernames = "usernames",
 	Users = "users"
 }
 
@@ -36,20 +34,8 @@ export type AuthSystemFields<T = never> = {
 
 // Record types for each collection
 
-export type EmojisRecord = {
-	career?: string;
-	emoji?: string;
-};
-
-export type InfoRecord = {
-	career?: string;
-	info?: string;
-};
-
-export type MergeCacheRecord = {
-	career1?: string;
-	career2?: string;
-	result?: string;
+export type UsernamesRecord = {
+	username: string;
 };
 
 export type UsersRecord = {
@@ -58,25 +44,19 @@ export type UsersRecord = {
 };
 
 // Response types include system fields and match responses from the PocketBase API
-export type EmojisResponse<Texpand = unknown> = Required<EmojisRecord> & BaseSystemFields<Texpand>;
-export type InfoResponse<Texpand = unknown> = Required<InfoRecord> & BaseSystemFields<Texpand>;
-export type MergeCacheResponse<Texpand = unknown> = Required<MergeCacheRecord> &
+export type UsernamesResponse<Texpand = unknown> = Required<UsernamesRecord> &
 	BaseSystemFields<Texpand>;
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>;
 
 // Types containing all Records and Responses, useful for creating typing helper functions
 
 export type CollectionRecords = {
-	emojis: EmojisRecord;
-	info: InfoRecord;
-	merge_cache: MergeCacheRecord;
+	usernames: UsernamesRecord;
 	users: UsersRecord;
 };
 
 export type CollectionResponses = {
-	emojis: EmojisResponse;
-	info: InfoResponse;
-	merge_cache: MergeCacheResponse;
+	usernames: UsernamesResponse;
 	users: UsersResponse;
 };
 
@@ -84,8 +64,6 @@ export type CollectionResponses = {
 // https://github.com/pocketbase/js-sdk#specify-typescript-definitions
 
 export type TypedPocketBase = PocketBase & {
-	collection(idOrName: "emojis"): RecordService<EmojisResponse>;
-	collection(idOrName: "info"): RecordService<InfoResponse>;
-	collection(idOrName: "merge_cache"): RecordService<MergeCacheResponse>;
+	collection(idOrName: "usernames"): RecordService<UsernamesResponse>;
 	collection(idOrName: "users"): RecordService<UsersResponse>;
 };
