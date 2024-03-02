@@ -18,7 +18,7 @@
             renderer.setSize( window.innerWidth, window.innerHeight );
             document.body.appendChild( renderer.domElement );
 
-            const geometry = new THREE.SphereGeometry( 1, 5, 5 );
+            const geometry = new THREE.SphereGeometry( 1, 6, 6 );
 
             const material = new THREE.ShaderMaterial({
                 uniforms: {
@@ -57,21 +57,21 @@
         }
 
         const render = () => {
-            renderer.clear()
+            renderer.clear();
             renderer.render(scene, camera);
         }
 
         const animate = () => {
-            requestAnimationFrame(animate)
+            requestAnimationFrame(animate);
 
-            object.rotation.x += 0.005
-            object.rotation.y += 0.005
+            object.rotation.x += 0.005;
+            object.rotation.y += 0.005;
 
-            render()
+            render();
         }
 
-        init()
-        animate()
+        init();
+        animate();
     }
 </script>
 
