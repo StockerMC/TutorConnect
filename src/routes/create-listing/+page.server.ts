@@ -5,11 +5,17 @@ import { pocketbase } from "$lib/pocketbase";
 export const actions = {
     login: async (event) => {
         const data = await event.request.formData();
-        const username = data.get("username");
+        // const username = data.get("username");
+        const username = event.cookies.get("username");
+        const fullName = data.get("fullname");
+        const subjects = data.get("subjects");
+        const email = data.get("email");
+        const title = data.get("title");
+        const description = data.get("description");
 
-        if (!username || typeof username !== "string") {
+        if (!username || !fullName || !subjects || !email || !title || !description || typeof username !== 'string' || typeof fullName !== 'string' || typeof subjects !== 'string' || typeof email !== 'string' || typeof title !== 'string' || typeof description !== 'string') {
             return fail(400, {
-                error: "username is required"
+                error: "error in data"
             });
         }
 
@@ -17,7 +23,6 @@ export const actions = {
             return fail(400, {
                 error: "username must be alphanumeric and between 3 and 16 characters"
             });
-
         }
 
         let shouldCreate;
@@ -36,6 +41,15 @@ export const actions = {
 
         event.cookies.set("username", username, {
             path: "/"
+        });
+
+        await pocketbase.collection("listings").create({
+            username,
+            fullName,
+            subjects,
+            email,
+            title,
+            description,
         });
 
         redirect(303, "/");
