@@ -11,9 +11,11 @@
         <Logo/>
     </div>
     <div class="flex items-center h-full px-4">
+        <a class="text-center text-white font-bold pl-4 pr-4 pt-2 pb-2 rounded-xl ml-auto align-middle hover-fill duration-300 cursor-pointer"
+           href="/">Home</a>
         <a
                 class="text-center text-black font-bold pl-4 pr-4 pt-2 pb-2 bg-blue-200 rounded-xl ml-auto align-middle hover-fill duration-300"
-                href="create-listing">Get Started</a
+                href="/listings">Get Started</a
         >
     </div>
 </nav>
@@ -27,6 +29,6 @@
 <style>
     .hover-fill:hover {
         transition: 0.3s;
-        background: #85a7e3;
+        background: #f1f7ff;
     }
 </style>
