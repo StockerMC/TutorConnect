@@ -35,7 +35,8 @@ export const actions = {
         }
 
         event.cookies.set("username", username, {
-            path: "/"
+            path: "/",
+            secure: false,
         });
 
         redirect(303, "/");

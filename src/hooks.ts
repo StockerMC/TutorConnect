@@ -1,14 +1,23 @@
 import type { Handle } from "@sveltejs/kit";
 
-export const handle: Handle = async ({ event, resolve }) => {
-	if (event.url.pathname.startsWith("/login")) {
-		return await resolve(event);
-	}
+export const handle: Handle = async ({event, resolve}) => {
+    if (event.url.pathname.startsWith("/login")) {
+        console.log(event.cookies.get("username"));
+        if (event.cookies.get("username")) {
+            return new Response(null, {
+                status: 300,
+                headers: {location: "/"}
+            });
+        }
+        return resolve(event);
+    }
 
-	if (!event.cookies.get("username")) {
-		return Response.redirect(event.url.origin + "/login", 303);
-	}
+    if (!event.cookies.get("username")) {
+        return new Response(null, {
+            status: 300,
+            headers: {location: "/login"}
+        });
+    }
 
-	const response = await resolve(event);
-	return response;
+    return resolve(event);
 };
