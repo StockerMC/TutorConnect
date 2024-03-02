@@ -58,6 +58,17 @@
 				</div>
 			</div>
 		{/each}
+		{#if data.listings.filter((l) => l.title
+					?.toLowerCase()
+					.includes(search.toLowerCase()) || l.description
+					?.toLowerCase()
+					.includes(search.toLowerCase()) || l.full_name
+					?.toLowerCase()
+					.includes(search.toLowerCase()) || l.subjects
+					?.toLowerCase()
+					.includes(search.toLowerCase())).length === 0}
+			<h1 class="text-2xl font-semibold text-white">No listings found</h1>
+		{/if}
 	</div>
 </div>
 
