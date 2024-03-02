@@ -3,7 +3,7 @@ import { fail, redirect } from "@sveltejs/kit";
 import { pocketbase } from "$lib/pocketbase";
 
 export const actions = {
-    login: async (event) => {
+    "create-listing": async (event) => {
         const data = await event.request.formData();
         // const username = data.get("username");
         const username = event.cookies.get("username");
