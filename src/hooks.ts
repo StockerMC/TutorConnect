@@ -12,7 +12,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		return resolve(event);
 	}
 
-	if (!event.cookies.get("username")) {
+	if (!event.cookies.get("username") && event.url.pathname !== "/home") {
 		return new Response(null, {
 			status: 300,
 			headers: { location: "/login" }
