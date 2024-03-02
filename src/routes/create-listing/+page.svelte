@@ -19,15 +19,15 @@
 					name="full_name"
 					id="full_name"
 					placeholder="Full Name"
-					class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+					class="rounded-lg pl-8 pr-8 pt-4 pb-4 m-6 text-2xl border-2"
 					required
 				/>
 				<input
 					type="text"
 					name="subjects"
 					id="subjects"
-					placeholder="Subjects / Areas of Expertise"
-					class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+					placeholder="Subjects"
+					class="rounded-lg pl-8 pr-8 pt-4 pb-4 m-6 text-2xl border-2"
 					required
 				/>
 				<input
@@ -35,7 +35,7 @@
 					name="email"
 					id="email"
 					placeholder="Email"
-					class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+					class="rounded-lg pl-8 pr-8 pt-4 pb-4 m-6 text-2xl border-2"
 					required
 				/>
 				<input
@@ -43,7 +43,7 @@
 					name="title"
 					id="title"
 					placeholder="Title"
-					class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+					class="rounded-lg pl-8 pr-8 pt-4 pb-4 m-6 text-2xl border-2"
 					required
 				/>
 				<input
@@ -51,7 +51,7 @@
 					name="description"
 					id="description"
 					placeholder="Description"
-					class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+					class="rounded-lg pl-8 pr-8 pt-4 pb-4 m-6 text-2xl border-2"
 					required
 				/>
 			</div>
