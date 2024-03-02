@@ -5,7 +5,7 @@
     export let data;
 </script>
 
-<nav class="h-20 w-screen fixed top-0 left-0 bg-gradient-to-br bg-blue-950">
+<nav class="h-20 w-screen top-0 left-0 bg-gradient-to-br bg-blue-950">
     <div class="flex items-center h-full px-4">
         <a
                 class="text-center text-black font-bold pl-4 pr-4 pt-2 pb-2 bg-blue-200 rounded-xl ml-auto align-middle hover-fill duration-300"
