@@ -1,4 +1,4 @@
-<form>
+<form method="POST" action="?/login">
     <div class="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-br from-blue-100 to-blue-300">
         <div class="shadow-2xl flex flex-col justify-center items-center p-7 border-2 rounded-3xl bg-white">
             <div class="text-4xl font-bold text-center">Login</div>
