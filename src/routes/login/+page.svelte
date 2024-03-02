@@ -19,6 +19,7 @@
                         id="username"
                         placeholder="Username"
                         class="rounded-lg pl-2 pr-2 pt-4 pb-4 m-6 text-2xl border-2"
+                        required
                 />
             </div>
             <div class="mt-3">
