@@ -18,6 +18,7 @@
     <h1 class="text-4xl font-bold text-center mt-8">Listings</h1>
     <div class="flex flex-col justify-start items-center mt-8 gap-y-10 w-full h-full">
         <!-- <p>test</p> -->
+        <!-- TODO: created at !!!! -->
         {#each data.listings as listing}
             <div
                 class="shadow-2xl flex justify-center text-left items-start p-7 border-2 rounded-3xl bg-white w-full h-[200%] gap-2"
@@ -43,10 +44,17 @@
                 </div>
                 <div class="w-2/3 flex flex-col justify-between items-start gap-3">
                     <div>
-                        <h2 class="text-2xl font-semibold underline">{listing.title?.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")}</h2>
+                        <h2 class="text-2xl font-semibold underline">{listing.title}</h2>
                         <p>{listing.description}</p>
                     </div>
-                    <button class="px-2 py-1.5 font-semibold rounded-xl bg-[#3243A5] text-white">Connect!</button>
+                    <button class="px-2 py-1.5 font-semibold rounded-xl bg-[#3243A5] text-white" on:click={() => {
+                        window.open('mailto:{email}?subject=Tutoring%20Services&body=RE%3A%20%7Btitle%7D%0D%0A%0D%0ADear%20%7Bname%7D%2C%0D%0A%0D%0AI%20was%20interested%20in%20your%20tutoring%20services%20and%20would%20like%20to%20discuss%20them%20further%20with%20you.%0D%0A%0D%0ASincerely%2C%0D%0A%7Busername%7D%0D%0A'
+                            .replace('{email}', listing.email ?? '')
+                            .replace('{name}', listing.full_name ?? '')
+                            .replace('{title}', listing.title ?? '')
+                            .replace('{username}', listing.username ?? '')
+                        )
+                    }}>Connect!</button>
                 </div>
             </div>
         {/each}
