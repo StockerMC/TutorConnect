@@ -49,7 +49,7 @@
     </div>
 </nav>
 
-{#key data.pathname}
+{#key $page}
     <div transition:slide class="">
         <slot/>
     </div>

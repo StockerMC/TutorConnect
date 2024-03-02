@@ -79,12 +79,8 @@
 </script>
 
 <div class="absolute top-64 w-full flex justify-center">
-	<h1 class="text-6xl">tutorconnect</h1>
+	<h1 class="text-6xl">tutor<span class="bg-black text-white">connect</span></h1>
 </div>
 
 <style>
-	* {
-		background-color: black;
-		color: white;
-	}
 </style>
