@@ -15,6 +15,9 @@
         <a class="text-white font-bold py-2 rounded-xl hover-fill duration-300 cursor-pointer" href="/listings">Listings</a>
         <a class="text-white font-bold py-2 rounded-xl hover-fill duration-300 cursor-pointer" href="/create-listing">Create Listing</a>
         <a class="text-black font-bold px-8 py-3 bg-blue-200 rounded-xl hover-fill-button duration-300" href="/listings">Get Started</a>
+        <form method="POST" action="?/logout">
+            <button class="text-black font-bold px-8 py-3 bg-blue-200 rounded-xl hover-fill-button duration-300">Logout</button>
+        </form>
     </div>
 </nav>
 
