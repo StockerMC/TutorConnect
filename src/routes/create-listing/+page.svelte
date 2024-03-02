@@ -10,7 +10,7 @@
 		class="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-br from-blue-100 to-blue-300"
 	>
 		<div
-			class="shadow-2xl flex flex-col justify-center items-center p-24 border-2 rounded-3xl bg-white"
+			class="shadow-2xl flex flex-col justify-center items-center p-20 border-2 rounded-3xl bg-white"
 		>
 			<div class="text-4xl font-bold text-center">Create Listing</div>
 			<div class="mt-4 flex flex-col">
@@ -58,10 +58,17 @@
 			<div class="mt-3">
 				<button
 					type="submit"
-					class="bg-blue-500 text-white rounded-lg pt-4 pb-4 pr-32 pl-32 w-full text-2xl border-2"
+					class="bg-blue-500 text-white rounded-lg pt-4 pb-4 pr-32 pl-32 w-full text-2xl hover-fill duration-300"
 					>Post Listing
 				</button>
 			</div>
 		</div>
 	</div>
 </form>
+
+<style>
+	.hover-fill:hover {
+		transition: 0.3s;
+		background: #0051d2;
+	}
+</style>

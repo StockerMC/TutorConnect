@@ -31,10 +31,17 @@
 			<div class="mt-3">
 				<button
 					type="submit"
-					class="bg-blue-500 text-white rounded-lg pt-4 pb-4 pr-32 pl-32 w-full text-2xl border-2"
+					class="bg-blue-500 text-white rounded-lg pt-4 pb-4 pr-32 pl-32 w-full text-2xl border-2 duration-300 hover-fill"
 					>Login
 				</button>
 			</div>
 		</div>
 	</div>
 </form>
+
+<style>
+	.hover-fill:hover {
+		transition: 0.3s;
+		background: #0051d2;
+	}
+</style>
