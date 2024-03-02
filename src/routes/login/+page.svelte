@@ -1,32 +1,22 @@
-<div class="h-screen w-screen justify-center align-middle">
-	<div class="rounded-3xl shadow-2xl h-72 w-56">
-		<form>
-			<div class="flex flex-col items-center justify-center h-screen">
-				<div class="text-2xl font-bold text-center">Login</div>
-				<div class="mt-4">
-					<input
-						type="text"
-						name="username"
-						id="username"
-						placeholder="Username"
-						class="rounded-lg p-2 m-6"
-					/>
-				</div>
-				<div class="mt-4">
-					<input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="Password"
-						class="rounded-lg p-2"
-					/>
-				</div>
-				<div class="mt-4">
-					<button type="submit" class="bg-blue-500 text-white rounded-lg p-2"
-						>Login</button
-					>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
+<form>
+    <div class="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-br from-blue-100 to-blue-300">
+        <div class="shadow-2xl flex flex-col justify-center items-center p-7 border-2 rounded-3xl bg-white">
+            <div class="text-4xl font-bold text-center">Login</div>
+            <div class="mt-4">
+                <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Username"
+                        class="rounded-lg p-2 m-6 text-2xl border-2"
+                />
+            </div>
+            <div class="mt-3">
+                <button type="submit" class="bg-blue-500 text-white rounded-lg p-4 w-full text-2xl border-2"
+                >Login
+                </button>
+            </div>
+        </div>
+
+    </div>
+</form>
