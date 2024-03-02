@@ -22,7 +22,7 @@ export const actions = {
 
         let shouldCreate;
         try {
-            const existing = await pocketbase.collection("usernames").getFirstListItem(`username = "${username}"`);
+            await pocketbase.collection("usernames").getFirstListItem(`username = "${username}"`);
             shouldCreate = false;
         } catch (e) {
             shouldCreate = true;
