@@ -35,6 +35,11 @@
                 href="/listings"
                 class:border-bottom-white={$page.url.pathname === "/listings"}>Get Started</a
         >
+        <a
+                href="/login"
+                class="text-black font-bold px-8 py-3 bg-white rounded-xl hover-fill-button duration-300"
+        >Login
+        </a>
         <form action="/logout" method="POST" use:enhance>
             <button
                     class="text-black font-bold px-8 py-3 bg-white rounded-xl hover-fill-button duration-300"

@@ -8,5 +8,5 @@ export const POST: RequestHandler = async (event) => {
         httpOnly: false
     });
 
-    redirect(303, "/");
+    throw redirect(303, "/");
 };
