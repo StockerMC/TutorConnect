@@ -6,7 +6,7 @@
     export let data;
 </script>
 
-<nav class="h-20 w-screen top-0 left-0 bg-gradient-to-br bg-blue-950 flex items-center justify-between px-4">
+<nav class="h-20 w-full top-0 left-0 bg-gradient-to-br bg-blue-950 flex items-center justify-between px-4">
     <div>
         <Logo/>
     </div>
