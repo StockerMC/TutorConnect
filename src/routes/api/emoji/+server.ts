@@ -57,7 +57,9 @@ export const POST: RequestHandler = async ({ request }) => {
 		error(500, "Something went wrong");
 	}
 
-	await pocketbase.collection("emojis").create({ career, emoji: result.choices[0].message.content });
+	await pocketbase
+		.collection("emojis")
+		.create({ career, emoji: result.choices[0].message.content });
 
 	lock = false;
 

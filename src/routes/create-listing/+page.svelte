@@ -1,14 +1,9 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
-    import type { ActionData } from "./$types";
-
-    export let form: ActionData;
 </script>
 
 <form method="POST" action="?/create-listing" use:enhance>
-    <div
-            class="flex flex-col items-center justify-center p-16 bg-black"
-    >
+    <div class="flex flex-col items-center justify-center p-16 bg-black">
         <div
                 class="shadow-2xl flex flex-col justify-center items-center p-20 border-2 rounded-3xl bg-black border-b-2 border-grey"
         >
@@ -73,12 +68,12 @@
     }
 
     .border-grey {
-        border-color: #2D2D2D;
+        border-color: #2d2d2d;
     }
 
     input {
         background-color: black;
-        border-color: #2D2D2D;
+        border-color: #2d2d2d;
         color: white;
     }
 

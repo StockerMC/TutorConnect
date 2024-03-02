@@ -19,7 +19,11 @@ export const actions = {
 			!subjects ||
 			!email ||
 			!title ||
-			!description || typeof full_name !== "string" || typeof subjects !== "string" || typeof email !== "string" || typeof title !== "string" ||
+			!description ||
+			typeof full_name !== "string" ||
+			typeof subjects !== "string" ||
+			typeof email !== "string" ||
+			typeof title !== "string" ||
 			typeof description !== "string"
 		) {
 			console.log({
