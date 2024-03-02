@@ -5,8 +5,9 @@
 </script>
 
 <div class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50" style="background-color: rgba(0,0,0,0.2)" class:hidden={hidden}>
-    <div class="relative shadow-2xl bg-white rounded-3xl {classInfo} z-50 pt-3">
+    <div class="relative shadow-2xl bg-white rounded-3xl {classInfo} z-50 pt-16 p-10">
         <span class="absolute top-2 right-4 text-black text-4xl select-none x-button" on:pointerdown={()=>(hidden=true)}>x</span>
+        <slot />
     </div>
 </div>
 
