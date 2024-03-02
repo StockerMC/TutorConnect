@@ -7,7 +7,7 @@
 
 <form method="POST" action="?/create-listing" use:enhance>
 	<div
-		class="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-br from-blue-100 to-blue-300"
+		class="flex flex-col items-center justify-center p-16 bg-gradient-to-br from-blue-100 to-blue-300"
 	>
 		<div
 			class="shadow-2xl flex flex-col justify-center items-center p-20 border-2 rounded-3xl bg-white"

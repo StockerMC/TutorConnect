@@ -19,12 +19,7 @@ export const actions = {
 			!subjects ||
 			!email ||
 			!title ||
-			!description ||
-			typeof username !== "string" ||
-			typeof full_name !== "string" ||
-			typeof subjects !== "string" ||
-			typeof email !== "string" ||
-			typeof title !== "string" ||
+			!description || typeof full_name !== "string" || typeof subjects !== "string" || typeof email !== "string" || typeof title !== "string" ||
 			typeof description !== "string"
 		) {
 			console.log({
@@ -61,6 +56,6 @@ export const actions = {
 			console.log(e);
 		}
 
-		redirect(303, "/");
+		redirect(303, "/listings");
 	}
 } satisfies Actions;
