@@ -7,7 +7,7 @@
 </script>
 
 <nav class="h-20 w-screen top-0 left-0 bg-gradient-to-br bg-blue-950">
-    <div class="absolute top-0 left-0" style="filter: invert(50%) brightness(200%)">
+    <div class="absolute top-4 left-4">
         <Logo/>
     </div>
     <div class="flex items-center h-full px-4">
