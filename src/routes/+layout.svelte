@@ -32,7 +32,7 @@
 
 
 {#key data.pathname}
-    <div transition:slide class="bg-black">
+    <div transition:slide class="">
         <slot/>
     </div>
 {/key}
